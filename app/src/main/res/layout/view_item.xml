@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.dalvinlabs.nycschools.viewmodel.ItemViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/view_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.title}"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textColor="@color/design_default_color_primary"
+            android:onClick="@{_ -> viewModel.onClickTitle()}"/>
+
+        <TextView
+            android:id="@+id/view_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.getDetails(context)}"
+            android:textColor="@color/design_default_color_secondary"
+            android:visibility="@{viewModel.isDetailsVisible() ? View.VISIBLE : View.GONE}"
+            />
+
+    </LinearLayout>
+</layout>
+

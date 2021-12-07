@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">20211205-DalvinderSingh-NYCSchools</string>
+    <string name="details">Reading: %1$s, Writing: %2$s, Math: %3$s</string>
+    <string name="button_exit">Exit</string>
+    <string name="button_retry">Retry</string>
+</resources>
